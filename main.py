@@ -18,7 +18,7 @@ from openai import OpenAI
 # CONFIG
 # =============================
 TOKEN = os.getenv("BOT_TOKEN")
-OWNER_ID = 6008831387
+OWNER_ID = 6873534451
 MAX_SIZE = 2048
 DB_PATH = "ai_bot.db"
 
