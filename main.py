@@ -242,13 +242,11 @@ def main():
     app = Application.builder().token(TOKEN).build()
 
     app.add_handler(CommandHandler("start", start_cmd))
-    app.add_handler(CommandHandler("allow", allow_cmd))
-    app.add_handler(CommandHandler("remove", remove_cmd))
-    app.add_handler(CommandHandler("list", list_cmd))
     app.add_handler(CommandHandler("ai", ai_cmd))
     app.add_handler(CommandHandler("img", img_cmd))
     app.add_handler(CommandHandler("resize", resize_cmd))
 
-    app.run_polling()
+    app.run_polling(drop_pending_updates=True)
+    
 if __name__ == "__main__":
     main()
