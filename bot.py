@@ -23,6 +23,7 @@ TOKEN = os.getenv("BOT_TOKEN")
 OWNER_ID = 6873534451
 MAX_SIZE = 2048
 DB_PATH = "ai_bot.db"
+PORT = int(os.environ.get('PORT', 8080))
 
 if not TOKEN:
     raise RuntimeError("BOT_TOKEN is not set")
