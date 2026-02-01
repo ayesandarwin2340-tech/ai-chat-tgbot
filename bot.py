@@ -33,7 +33,7 @@ SESSION_NAME = "janab_bot_session"
 BOT_TOKEN = "8347033647:AAFueu9djp7QzuqNJKqys1OkJumMC3ZjJYk"
 
 # ⚠️ YOUR GEMINI API KEY
-GEMINI_API_KEY = "AIzaSyDWvoF3z9vDYxWNPLOE-X6zn_4yrdQzEts"
+GEMINI_API_KEY = "AIzaSyAGMUNSVijN1SbRwZ5hEBKlcyezIUCBWkM"
 
 # ⚠️ YOUR TELEGRAM ID (ADMIN)
 OWNER_CHAT_ID = 6873534451 
@@ -53,7 +53,7 @@ if not GEMINI_API_KEY or GEMINI_API_KEY.startswith("PUT_"):
 
 try:
     genai.configure(api_key=GEMINI_API_KEY)
-    gemini_model = genai.GenerativeModel("gemini-1.5-flash")
+    gemini_model = genai.GenerativeModel("models/gemini-1.5-flash")
 except Exception as e:
     print(f"Gemini Config Error: {e}")
 
