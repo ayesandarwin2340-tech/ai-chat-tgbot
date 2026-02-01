@@ -53,7 +53,7 @@ if not GEMINI_API_KEY or GEMINI_API_KEY.startswith("PUT_"):
 
 try:
     genai.configure(api_key=GEMINI_API_KEY)
-    gemini_model = genai.GenerativeModel("gemini-flash-latest")
+    gemini_model = genai.GenerativeModel("gemini-2.5-flash")
 except Exception as e:
     print(f"Gemini Config Error: {e}")
 
