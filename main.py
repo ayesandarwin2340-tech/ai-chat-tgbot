@@ -72,7 +72,7 @@ logger = logging.getLogger(__name__)
 client = TelegramClient(CONFIG["SESSION_NAME"], CONFIG["API_ID"], CONFIG["API_HASH"])
 
 # -----------------------------
-# GEMINI 2.0 FLASH SETUP (NEW VERSION)
+# GEMINI 2.5 FLASH SETUP (NEW VERSION)
 # -----------------------------
 class GeminiManager:
     def __init__(self, api_key: str):
@@ -82,11 +82,11 @@ class GeminiManager:
         self.setup_gemini()
     
     def setup_gemini(self):
-        """Initialize Gemini 2.0 Flash with new package"""
+        """Initialize Gemini 2.5 Flash with new package"""
         try:
             # New way to configure
             self.client = genai.Client(api_key=self.api_key)
-            logger.info("✅ Gemini 2.0 Flash initialized successfully (new package)")
+            logger.info("✅ Gemini 2.5 Flash initialized successfully (new package)")
         except Exception as e:
             logger.error(f"❌ Gemini initialization failed: {e}")
             raise e
@@ -116,7 +116,7 @@ class GeminiManager:
             
             # Generate response
             response = self.client.models.generate_content(
-                model="gemini-2.0-flash",
+                model="gemini-2.5-flash",
                 contents=contents
             )
             
